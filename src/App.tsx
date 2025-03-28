@@ -391,7 +391,7 @@ export default function ConcertInvitation() {
         onPlay={() => setIsPlaying(true)}
       >
         {/* In a real app, you would include actual audio sources */}
-        <source src="/public/songs/sun.mp3" type="audio/mpeg" />
+        <source src="/songs/sun.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
 
