@@ -391,7 +391,7 @@ export default function ConcertInvitation() {
         onPlay={() => setIsPlaying(true)}
       >
         {/* In a real app, you would include actual audio sources */}
-        <source src="/placeholder-audio.mp3" type="audio/mpeg" />
+        <source src="/public/songs/sun.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
 
@@ -469,7 +469,7 @@ export default function ConcertInvitation() {
                     whileHover="hover"
                     custom={0}
                     onClick={togglePlay}
-                    className="w-8 h-8 flex items-center justify-center rounded-full bg-amber-500 text-black hover:bg-amber-600 transition-colors relative overflow-hidden"
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-amber-500 text-black hover:bg-amber-600 transition-colors relative overflow-hidden cursor-pointer"
                   >
                     {isPlaying ? <Pause size={16} /> : <Play size={16} />}
 
@@ -514,7 +514,7 @@ export default function ConcertInvitation() {
                     whileTap="pressed"
                     whileHover="hover"
                     onClick={nextTrack}
-                    className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors relative overflow-hidden"
+                    className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors relative overflow-hidden cursor-pointer"
                   >
                     <SkipForward size={16} color="white" />
 
@@ -538,7 +538,7 @@ export default function ConcertInvitation() {
                     whileTap="pressed"
                     whileHover="hover"
                     onClick={toggleMute}
-                    className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors relative overflow-hidden"
+                    className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors relative overflow-hidden cursor-pointer"
                   >
                     {isMuted ? <VolumeX size={16} /> : <Volume2 color="white" size={16} />}
 
