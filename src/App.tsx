@@ -22,9 +22,7 @@ import confetti from 'canvas-confetti'
 import { useMobile } from '@/hooks/use-mobile'
 
 // Sample track list - in a real app, these would be actual audio files
-const TRACKS = [
-  { id: 1, name: '夕阳无限好', artist: 'Eason Chan' },
-]
+const TRACKS = [{ id: 1, name: '夕阳无限好', artist: 'Eason Chan' }]
 
 export default function ConcertInvitation() {
   const [accepted, setAccepted] = useState(false)
@@ -63,7 +61,7 @@ export default function ConcertInvitation() {
 
     // Add subtle floating animation to stars
     const interval = setInterval(() => {
-      const stars = document.querySelectorAll('.floating-star')
+      const stars = document.querySelectorAll<HTMLElement>('.floating-star')
       stars.forEach(star => {
         const randomX = (Math.random() - 0.5) * 10
         const randomY = (Math.random() - 0.5) * 10
@@ -280,7 +278,7 @@ export default function ConcertInvitation() {
 
   return (
     <div className="flex justify-center items-center min-h-[100dvh] p-4 relative overflow-hidden">
-      <style jsx global>{`
+      <style>{`
         @keyframes fadeSlideUp {
           from {
             opacity: 0;
